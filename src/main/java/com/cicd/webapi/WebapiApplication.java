@@ -26,6 +26,6 @@ class HelloController {
 class HealthController {
     @GetMapping("/health")
     public String health() {
-        return "Server Healthi!";
+        return "Server Healthy!";
     }
 }
