@@ -39,7 +39,7 @@ class WebapiApplicationTests {
 				.accept(MediaType.TEXT_PLAIN))
 			.andExpect(status().isOk())
 			//.andExpect(content().string("Current Server Date: " + java.time.LocalDate.now()));
-			.andExpect(content().string("Current Server Date: " + java.time.LocalDateTime.now()));
+			.andExpect(content().string("Current Server Date Time: " + java.time.LocalDateTime.now()));
 	}
 
 }
