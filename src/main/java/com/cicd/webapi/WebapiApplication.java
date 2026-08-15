@@ -21,3 +21,11 @@ class HelloController {
         return "Hello CI/CD World!";
     }
 }
+
+@RestController
+class HealthController {
+    @GetMapping("/health")
+    public String health() {
+        return "Server Healthi!";
+    }
+}
