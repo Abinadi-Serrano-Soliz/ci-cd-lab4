@@ -28,7 +28,7 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assert calculator.multiply(2, 3) == 6;
         assert calculator.multiply(0, 3) == 0;
-        assert calculator.multiply(1, -3) == 3;
+        assert calculator.multiply(1, -3) == -3;
     }
 
     @Test
