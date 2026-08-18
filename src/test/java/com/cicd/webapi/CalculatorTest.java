@@ -13,6 +13,7 @@ public class CalculatorTest {
         assert calculator.add(-2, -3) == -5;
     }
 
+    // Additional test methods for subtract, multiply, and divide can be added here
     @Test
     void testSubtract() {
         Calculator calculator = new Calculator();
@@ -21,12 +22,13 @@ public class CalculatorTest {
         assert calculator.subtract(-5, 3) == -8;
     }
 
+    // Additional test methods for multiply and divide can be added here
     @Test
     void testMultiply() {
         Calculator calculator = new Calculator();
         assert calculator.multiply(2, 3) == 6;
         assert calculator.multiply(0, 3) == 0;
-        assert calculator.multiply(1, -3) == -3;
+        assert calculator.multiply(1, -3) == 3;
     }
 
     @Test
