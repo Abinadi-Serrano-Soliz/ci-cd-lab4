@@ -29,8 +29,17 @@ jobs:
         java-version: '25'
         distribution: 'temurin'
         cache: maven
+
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      ## Uncomment the following line to run build & tests
+      #run: mvn -B package --file pom.xml
+      ## Uncomment the following line to run build without tests option 1
+      #run: mvn -B package --file pom.xml -DskipTests
+      ## Uncomment the following line to run build without test option 2
+      run: ./mvnw --batch-mode compile
+
+    - name: Run tests with Maven
+      run: ./mvnw --batch-mode test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
