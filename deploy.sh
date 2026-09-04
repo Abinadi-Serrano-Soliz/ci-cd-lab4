@@ -14,7 +14,7 @@ if [[ -z "${NEW_JAR_PATH:-}" ]]; then
   echo "Usage: deploy.sh <path-to-new-jar>"
   exit 1
 fi
-
+#muestra el nombre del archivo jar que se va a desplegar
 echo "🚀 Deploying ${APP_NAME}"
 echo "➡️  New artifact: ${NEW_JAR_PATH}"
 
