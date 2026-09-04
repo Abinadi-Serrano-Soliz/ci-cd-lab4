@@ -27,7 +27,11 @@ class HelloController {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello CI/CD World!";
+        return "GRUPO 12:\n\n" +
+           "1. Camargo Soleto Gustavo Sebastián\n" +
+           "2. Saavedra Gómez Henry\n" +
+           "3. Villca Quiroga Ronald Nelson\n" +
+           "4. Serrano Soliz Abinadi";
     }
 
     @GetMapping("/instance")

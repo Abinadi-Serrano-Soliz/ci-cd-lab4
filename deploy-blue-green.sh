@@ -118,7 +118,7 @@ chmod 755 "$TARGET_JAR"
 
 echo "▶️  Starting $TARGET instance"
 
-nohup java $JAVA_OPTS \
+APP_INSTANCE=$TARGET nohup java $JAVA_OPTS \
   -jar "$TARGET_JAR" \
   --spring.profiles.active="$SPRING_PROFILE" \
   --server.port="$TARGET_PORT" \
