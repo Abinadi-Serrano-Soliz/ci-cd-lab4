@@ -1,5 +1,8 @@
 package com.cicd.webapi;
 
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +19,24 @@ public class WebapiApplication {
 
 @RestController
 class HelloController {
+    @Value("${server.port:8080}")
+    private String port;
+
+    @Value("${APP_INSTANCE:unknown}")
+    private String instanceId;
+
     @GetMapping("/")
     public String hello() {
-        return "Hello CI/CD World!";
+        return "GRUPO 12:\n\n" +
+           "1. Camargo Soleto Gustavo Sebastián\n" +
+           "2. Saavedra Gómez Henry\n" +
+           "3. Villca Quiroga Ronald Nelson\n" +
+           "4. Serrano Soliz Abinadi";
+    }
+
+    @GetMapping("/instance")
+    public Map<String, String> instance() {
+        return Map.of("instance", instanceId , "port", port);
     }
 }
 
