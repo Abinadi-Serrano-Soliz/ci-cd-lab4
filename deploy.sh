@@ -2,13 +2,13 @@
 set -euo pipefail
 
 APP_NAME="spring-boot-app"
-APP_DIR="/opt/spring-boot-app"
+APP_DIR="/home/osboxes/opt/spring-boot-app"
 JAR_NAME="app.jar"
 JAVA_OPTS="-Xms512m -Xmx1024m"
 SPRING_PROFILE="prod"
 PORT=8080
 
-NEW_JAR_PATH="$1"
+NEW_JAR_PATH="$(realpath "$1")"
 
 if [[ -z "${NEW_JAR_PATH:-}" ]]; then
   echo "Usage: deploy.sh <path-to-new-jar>"
