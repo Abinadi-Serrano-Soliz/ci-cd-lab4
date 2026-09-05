@@ -46,7 +46,7 @@ class WebapiApplicationTests {
 		MockMvc.perform(get("/")
 				.accept(MediaType.TEXT_PLAIN))
 			.andExpect(status().isOk())
-			.andExpect(content().string(/*"GRUPO 12:\n\n1. Camargo Soleto Gustavo Sebastián\n2. Saavedra Gómez Henry\n3. Villca Quiroga Ronald Nelson\n4. Serrano Soliz Abinadi"*/));
+			.andExpect(content().string("GRUPO 12:\n\n1. Camargo Soleto Gustavo Sebastián\n2. Saavedra Gómez Henry\n3. Villca Quiroga Ronald Nelson\n4. Serrano Soliz Abinadi"));
 	}
 
 	@Test
