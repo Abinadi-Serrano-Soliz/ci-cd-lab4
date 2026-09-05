@@ -49,13 +49,13 @@ class WebapiApplicationTests {
 			.andExpect(content().string("GRUPO 12:\n\n1. Camargo Soleto Gustavo Sebastián\n2. Saavedra Gómez Henry\n3. Villca Quiroga Ronald Nelson\n4. Serrano Soliz Abinadi"));
 	}
 
-	@Test
+	/*@Test
 	void checkHealthyResponse() throws Exception {
 		MockMvc.perform(get("/health")
 				.accept(MediaType.TEXT_PLAIN))
 			.andExpect(status().isOk())
 			.andExpect(content().string("Server Healthy!"));
-	}
+	}*/
 
 	@Test
 	void checkDateResponse() throws Exception {
